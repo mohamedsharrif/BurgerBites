@@ -1,42 +1,42 @@
 import React from "react";
 
+
 const ListOfProducts = [
   {
     id: 1,
-    name: "Jeans",
-    image:
-      "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGplYW5zfGVufDB8fDB8fHww",
+    name: "Spicy Dobule Chicken Burger",
+    image: "https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=400&auto=format&fit=crop&q=60",
     price: "20€",
   },
   {
     id: 2,
-    name: "T-shirt",
-    image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dCUyMHNoaXJ0fGVufDB8fDB8fHww",
+    name: "Elk burger",
+    image: "https://images.unsplash.com/photo-1596662977545-485cfa84f149?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGJ1cmdlcnxlbnwwfHwwfHx8Mg%3D%3D",
     price: "20€",
   },
   {
     id: 3,
-    name: "Short",
-    image: "https://images.unsplash.com/photo-1585145197082-dba095ba01ab?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c2hvcnRzfGVufDB8fDB8fHww",
+    name: "Double Cheesburger",
+    image: "https://images.unsplash.com/photo-1590742309630-e9f9b66da3f7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fGJ1cmdlcnxlbnwwfHwwfHx8Mg%3D%3D",
     price: "20€",
   },
   {
     id: 4,
-    name: "Shirt",
-    image: "https://images.unsplash.com/photo-1618085219724-c59ba48e08cd?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODJ8fHNoaXJ0c3xlbnwwfHwwfHx8MA%3D%3D",
+    name: "Mexican Cheeseburgers",
+    image: "https://images.unsplash.com/photo-1600688640154-9619e002df30?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fGJ1cmdlcnxlbnwwfHwwfHx8Mg%3D%3D",
     price: "20€",
   },
   {
     id: 5,
-    name: "Jacket",
-    image: "https://images.unsplash.com/photo-1605908502724-9093a79a1b39?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fGphY2tldHxlbnwwfHwwfHx8MA%3D%3D",
+    name: "Cheesburger",
+    image: "https://images.unsplash.com/photo-1603893662172-99ed0cea2a08?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGJ1cmdlcnxlbnwwfHwwfHx8Mg%3D%3D",
     price: "20€",
   },
   {
     id: 6,
-    name: "Sweater",
+    name: "Double Beef Burger",
     image:
-      "https://images.unsplash.com/photo-1608984361471-ff566593088f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHN3ZWF0ZXJ8ZW58MHx8MHx8fDA%3D",
+      "https://images.unsplash.com/photo-1608767221051-2b9d18f35a2f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fGJ1cmdlcnxlbnwwfHwwfHx8Mg%3D%3D",
     price: "20€",
   },
 ];
