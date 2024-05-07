@@ -1,21 +1,47 @@
-import { useContext, useReducer } from "react";
+import { createContext, useContext, useReducer } from "react";
 import shopReducer, { initialState } from "./shopReducer";
 
-const shopContext = useContext(initialState);
+const ShopContext = createContext(initialState);
 
-const shopProvider = ({children}) => {
-   const [state, dispatch] = useReducer(shopReducer,initialState)
+export const ShopProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(shopReducer, initialState);
 
-   const addToCart = (product) => {
-
-    const updatedProduct = state.products.concat(product)
+  const addToCart = (product) => {
+    const updatedProducts = state.products.concat(product);
 
     dispatch({
-        type: "ADD_TO_CART",
-        payload: {
-            products: payload.products
-        }
-    })
+      type: "ADD_TO_CART",
+      payload: {
+        products: updatedProducts,
+      },
+    });
+  };
 
-   }
-}
+  const removeFromCart = (product) => {
+   const updatedProducts = state.product.filter(p => p.id !== product.id)
+
+   dispatch({
+      type: "REMOVE_FROM_CART",
+      payload: {
+         product: updatedProducts
+      }
+   })
+  }
+
+  const values = {
+    products: state.products,
+    total: state.total,
+    addToCart,
+    removeFromCart
+  };
+
+  return <ShopContext.Provider value={values}>{children}</ShopContext.Provider>;
+};
+
+export const useShop = () => {
+  const context = useContext(ShopContext);
+  if (context === undefined) {
+    throw new Error("useShop must be used within a ShopProvider");
+  }
+  return context;
+};

@@ -1,21 +1,31 @@
-import React from 'react'
+import React from "react";
+import { useShop } from "../ShopContext";
 
-const Product = ({product}) => {
+const Product = ({ product }) => {
+  const { addToCart } = useShop();
+
+  const handleAddToCart = () => {
+    addToCart(product);
+  };
   return (
-    <div className='card'
-    style={{minHeight: '100%', 
-    background: `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),
+    <div
+      className="card"
+      style={{
+        minHeight: "100%",
+        background: `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),
     url(${product.image})
-    `}}
+    `,
+      }}
     >
       <div className="info">
         <span>{product.name}</span>
         <span>{product.price}</span>
       </div>
-      <button className="btn btn-primary">+</button>
-     
+      <button className="btn btn-primary" onClick={handleAddToCart}>
+        +
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;
