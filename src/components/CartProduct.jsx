@@ -8,14 +8,14 @@ const CartProduct = () => {
       <h2>Cart Products</h2>
       {products.map((product)=>(
         <div className="cart-prodct">
-            <div cart-title-img>
+            <div className='cart-title-img'>
                 <img src={product.image} alt="" />
                 <span>{product.name}</span>
             </div>
             <h5>{product.price}</h5>
-            <button className='delete' onClick={()=> removeFromCart(product)}>
+            <span className='delete' onClick={()=> removeFromCart(product)}>
                 delete
-            </button>
+            </span>
         </div>
       ))}
       <div className="total-price">
