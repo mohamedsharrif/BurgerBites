@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useShop } from "../ShopContext";
 
 const Product = ({ product }) => {
-  const { addToCart } = useShop();
+  const { addToCart, removeFromCart, products } = useShop();
+  const [isInCart, setIsInCart] = useState(false);
+
+  useEffect(() => {
+    const isCart = products.filter((pro) => pro.id === product.id);
+    if (isCart.length > 0) {
+      setIsInCart(true);
+    } else {
+      setIsInCart(false);
+    }
+  }, [products]);
 
   const handleAddToCart = () => {
-    addToCart(product);
+    if (isInCart) {
+      removeFromCart(product);
+    } else {
+      addToCart(product);
+    }
   };
   return (
     <div
@@ -21,8 +35,11 @@ const Product = ({ product }) => {
         <span>{product.name}</span>
         <span>{product.price}</span>
       </div>
-      <button className="btn btn-primary" onClick={handleAddToCart}>
-        +
+      <button
+        className={`btn ${isInCart ? "btn-secondary" : "btn-primary"} `}
+        onClick={handleAddToCart}
+      >
+        {isInCart ? "-" : "+"}
       </button>
     </div>
   );

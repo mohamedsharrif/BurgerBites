@@ -18,12 +18,12 @@ export const ShopProvider = ({ children }) => {
   };
 
   const removeFromCart = (product) => {
-   const updatedProducts = state.product.filter(p => p.id !== product.id)
+   const updatedProducts = state.products.filter(p => p.id !== product.id)
 
    dispatch({
       type: "REMOVE_FROM_CART",
       payload: {
-         product: updatedProducts
+         products: updatedProducts
       }
    })
   }
