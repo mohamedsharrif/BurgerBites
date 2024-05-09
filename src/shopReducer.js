@@ -18,8 +18,14 @@ const shopReducer = (state, action) =>{
                 ...state,
                 products: payload.products,
             }
+        case "CALCULATE_TOTAL_PRICE":
+            return{
+                ...state, 
+                total: payload.total,
+            }
+        
          default:
-            return initialState;
+            return state;
     }
 
 

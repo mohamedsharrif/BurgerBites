@@ -19,7 +19,7 @@ const CartProduct = () => {
         </div>
       ))}
       <div className="total-price">
-        <h2>Total Price :{total}€</h2>
+        <h2>Total Price :{total}</h2>
       </div>
     </div>
   )

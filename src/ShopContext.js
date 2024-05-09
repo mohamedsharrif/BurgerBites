@@ -8,6 +8,7 @@ export const ShopProvider = ({ children }) => {
 
   const addToCart = (product) => {
     const updatedProducts = state.products.concat(product);
+    calculateTotal(updatedProducts);
 
     dispatch({
       type: "ADD_TO_CART",
@@ -19,7 +20,7 @@ export const ShopProvider = ({ children }) => {
 
   const removeFromCart = (product) => {
    const updatedProducts = state.products.filter(p => p.id !== product.id)
-
+   calculateTotal(updatedProducts);
    dispatch({
       type: "REMOVE_FROM_CART",
       payload: {
@@ -27,6 +28,22 @@ export const ShopProvider = ({ children }) => {
       }
    })
   }
+
+  const calculateTotal = (products) => {
+    let total = 0;
+    
+    products.forEach((pro) => {
+      total += parseFloat(pro.price);
+    });
+
+    dispatch({
+      type: "CALCULATE_TOTAL_PRICE",
+      payload: {
+        total: total
+      }
+    });
+  };
+  
 
   const values = {
     products: state.products,
