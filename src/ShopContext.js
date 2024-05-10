@@ -44,7 +44,7 @@ export const ShopProvider = ({ children }) => {
     });
   };
   
-
+  
   const values = {
     products: state.products,
     total: state.total,

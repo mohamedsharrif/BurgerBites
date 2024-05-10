@@ -3,6 +3,7 @@ import { useShop } from '../ShopContext';
 
 const CartProduct = () => {
     const {removeFromCart,products, total} = useShop();
+    const roundedTotal = total.toFixed(2);
   return (
     <div className='cart-products'>
       <h2>Cart Products</h2>
@@ -19,7 +20,7 @@ const CartProduct = () => {
         </div>
       ))}
       <div className="total-price">
-        <h2>Total Price :{total}</h2>
+        <h2>Total Price :{roundedTotal}€</h2>
       </div>
     </div>
   )

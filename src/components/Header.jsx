@@ -7,7 +7,7 @@ const Header = () => {
   const {products} = useShop();
   return (
     <div className='menu'>
-      <Link className='logo' to='/'>CoverMeChic</Link>
+      <Link className='logo' to='/'>BurgerBite</Link>
       <div className='links'>
       <Link to='/'>Home</Link>
       <Link to='/about'>About</Link>

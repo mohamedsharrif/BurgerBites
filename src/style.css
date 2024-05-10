@@ -165,3 +165,58 @@ a {
 .total-price{
     border-top: 1px solid #ccc;
 }
+
+
+
+.payment-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .payment-form-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .payment-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .payment-form-container label {
+    margin-bottom: 5px;
+  }
+  
+  .payment-form-container input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .expiry-date-input {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .expiry-month,
+  .expiry-year {
+    width: 48%;
+  }
+  
+  .payment-form-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .payment-form-container button:hover {
+    background-color: #0056b3;
+  }
+  
