@@ -8,9 +8,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can implement the logic to handle the form submission
     console.log('Form submitted:', { email, phone, name, message });
-    // Clear form fields after submission
     setEmail('');
     setPhone('');
     setName('');
