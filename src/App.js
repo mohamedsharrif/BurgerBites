@@ -5,6 +5,7 @@ import Home from "./pajes/Home";
 import About from "./pajes/About";
 import Contact from "./pajes/Contact";
 import Cart from "./pajes/Cart";
+import Footer from "./pajes/Footer";
 
 const App = () => {
   const[cart,setCart] = useState(10)
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
+      <Footer />
     </div>
   );
 };
