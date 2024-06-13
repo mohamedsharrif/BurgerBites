@@ -1,6 +1,6 @@
 # BurgerBites
 
-BurgerBites is a restaurant where you can order delicious burgers online. Visit our website [here](https://burger-bites-delta.vercel.app) to explore our menu and place your order.
+BurgerBites is a restaurant where you can order delicious burgers online. Visit our website [here](https://burger-bites-delta.vercel.app) to explore our menu.
 
 ## Technologies Used
 
